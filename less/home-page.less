@@ -1,7 +1,7 @@
 // Home Content
 
 .home {
-
+  
   .intro {
 
     h2 {
@@ -19,7 +19,25 @@
     flex-wrap: wrap;
     width: 100%;
 
+    @media @phone {
+
+      .blast {
+        width: 100%;
+      }
+
+      .sky {
+        display: none;
+      }
+
+      .launch {
+        display: none;
+      }
+    }
+
     img {
+
+      
+
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
@@ -46,7 +64,38 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      display: flex;
+      flex-direction: column-reverse;
+    
+  }
+
+    .btn {
+      .buttons(@sea-shell, @btn-bg-color);
+    }
+
+    .btn:hover {
+      .keyframe{
+        animation-name: transition;
+        animation-duration: 1s;
+        
+      }
+      
+      @keyframes transition {
+        from {background-color: @btn-bg-color;}
+        to {background-color: @sea-shell;}
+       }
+      
+      .buttons(@btn-bg-color, @sea-shell);
+      
+    }
+
     .walk-text {
+
+      @media @phone {
+        width: 100%;
+      }
+
       width: 50%;
 
       h3 {
@@ -56,19 +105,30 @@
       p {
         margin-bottom: 26px;
       }
-
-      .btn {
-      }
+      
     }
 
     .walk-img {
+
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media @phone {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+      }
       }
     }
   }

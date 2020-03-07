@@ -1,1 +1,27 @@
 // Navigation code here
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5rem;
+
+    @media @phone {
+        padding: 20px;
+      }
+}
+
+nav {
+    .flex-menu-center(@justify, @align);
+}
+
+a {
+    color: @waterloo;
+    padding: 1%;
+    margin: 1%;
+    text-decoration: none;
+}
+
+img {
+    border-radius: 5px;
+}
