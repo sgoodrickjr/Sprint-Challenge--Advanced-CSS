@@ -75,16 +75,15 @@
     }
 
     .btn:hover {
-      .keyframe{
+        background-color: @sea-shell;
         animation-name: transition;
         animation-duration: 1s;
-        
-      }
+    
       
-      @keyframes transition {
-        from {background-color: @btn-bg-color;}
-        to {background-color: @sea-shell;}
-       }
+        @keyframes transition {
+          from {background-color: @btn-bg-color;}
+          to {background-color: @sea-shell;}
+        }
       
       .buttons(@btn-bg-color, @sea-shell);
       
@@ -117,6 +116,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-left: 0%;
     }
       
       img {

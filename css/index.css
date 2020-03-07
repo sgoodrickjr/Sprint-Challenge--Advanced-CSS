@@ -178,9 +178,13 @@ nav {
 }
 a {
   color: #81848E;
-  padding: 1%;
   margin: 1%;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  a {
+    margin-bottom: 5%;
+  }
 }
 img {
   border-radius: 5px;
@@ -262,6 +266,8 @@ footer {
   }
 }
 .home .walk .btn:hover {
+  animation-name: transition;
+  animation-duration: 1s;
   background-color: #F1F1F1;
   border: none;
   color: #22283A;
@@ -271,10 +277,6 @@ footer {
   font-size: 16px;
   width: 100px;
   border-radius: 8px;
-}
-.home .walk .btn:hover .keyframe {
-  animation-name: transition;
-  animation-duration: 1s;
 }
 @keyframes transition {
   from {
@@ -312,6 +314,7 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 0%;
   }
 }
 .home .walk .walk-img img {
